@@ -10,7 +10,7 @@ ESP8266WebServer webServer(80);
 
 String HTML_CONTENT =
   "<!DOCTYPE html><html><head><title>CaptivePortal</title></head><body>"
-  "<h1>Captive Portal!</h1><p>This is a template. "
+  "<h1>Captive Portal!</h1><p>This is a dummy"
   "Use <a href='/content'> the content site </a> to change this site</p></body></html>";
 
 
@@ -84,7 +84,7 @@ void setup() {
     webServer.send(200, "text/html",   "<!DOCTYPE html><html><head><title>CaptivePortal Content Editor</title></head><body>"
     "<form action='/'><input type='submit' value='back' style=\"width:90px; height:40px;\"/></form>"
     "<form method='POST' action='contentsave'><h4>Set Captive portal content</h4>"
-    "<textarea cols='120' rows='40' name='content' style=\"width:1500px; height:900px;\" >" + HTML_CONTENT +"</textarea>"
+    "<textarea cols='120' rows='40' name='content' style=\"width:1500px; height:900px;\" onkeydown='if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+\"    \"+v.substring(e);this.selectionStart=this.selectionEnd=s+4;return false;}'>" + HTML_CONTENT +"</textarea>"
     "<br /><input type='submit' value='commit' style=\"width:90px; height:40px;\"/></form></body></html>");
   });
 
