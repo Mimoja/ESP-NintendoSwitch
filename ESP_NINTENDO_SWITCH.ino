@@ -15,8 +15,8 @@ String HTML_CONTENT =
 
 
 const char* AP_SSID="SwitchHaxx";
-const char* EX_SSID = "Northern Lights";
-const char* PASSWD = "technikeristinformiert";
+const char* EX_SSID = ;"YOURSSIDHERE";
+const char* PASSWD = ;"YOURPASSWORDHERE";
 const IPAddress myIP(10, 0, 0, 42);
 const IPAddress subnetmask(255, 255, 255, 0);
 
